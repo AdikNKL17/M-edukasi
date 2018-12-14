@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <android.support.constraint.ConstraintLayout
-        android:id="@+id/pelajaran_holder"
+        android:id="@+id/jenjang_holder"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@drawable/circle_shape"
@@ -15,7 +16,7 @@
         app:elevation="2dp">
 
         <ImageView
-            android:id="@+id/pelajaran_icon"
+            android:id="@+id/jenjang_icon"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_centerInParent="true"
@@ -29,7 +30,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/pelajaran_name"
+            android:id="@+id/jenjang_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -39,11 +40,11 @@
             android:text="TextView"
             android:textColor="@color/colorBlack"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/pelajaran_icon"
+            app:layout_constraintStart_toEndOf="@+id/jenjang_icon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/pelajaran_item_total"
+            android:id="@+id/jenjang_item_total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
@@ -55,8 +56,8 @@
             android:textColor="@color/colorGray"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/pelajaran_icon"
-            app:layout_constraintTop_toBottomOf="@+id/pelajaran_name" />
+            app:layout_constraintStart_toEndOf="@+id/jenjang_icon"
+            app:layout_constraintTop_toBottomOf="@+id/jenjang_name" />
 
         <TextView
             android:id="@+id/textView3"
@@ -71,8 +72,8 @@
             android:textColor="@color/colorGray"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/pelajaran_item_total"
-            app:layout_constraintTop_toBottomOf="@+id/pelajaran_name" />
+            app:layout_constraintStart_toEndOf="@+id/jenjang_item_total"
+            app:layout_constraintTop_toBottomOf="@+id/jenjang_name" />
 
         <ImageButton
             android:id="@+id/imageButton"

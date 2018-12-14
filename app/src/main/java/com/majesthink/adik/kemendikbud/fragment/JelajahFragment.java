@@ -101,19 +101,19 @@ public  class JelajahFragment extends android.support.v4.app.Fragment {
 
     private void dataRecommended() {
 
-        Applications applications = new Applications(0, "http://www.iosicongallery.com/icons/stripe-dashboard-2018-10-03/512.png","Stripe","Stripe Inc", 4.5, 10);
+        Applications applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/sicerdik/logo%20sicerdik.png","Si Cerdik","BPMPK Inc", 4.5, 10);
         applicationsList.add(applications);
-        applications = new Applications(0, "https://cfcdnpull-creativefreedoml.netdna-ssl.com/wp-content/uploads/2015/06/Twitter-bird-white-blue2.png","Twitter","Twitter Inc", 4.1, 10);
+        applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/me/me2012/ME12PAUD06.jpg","Benda - Benda Langit","BPMPK Inc", 4.1, 10);
         applicationsList.add(applications);
-        applications = new Applications(0, "http://whisper.sh/img/whisper-square-appicon@3x.png","Sum and Math","Edu Inc", 4.0, 10);
+        applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/lomba/lomba2014/ME14LOMP34.jpg","Himpunan","BPMPK Inc", 4.0, 10);
         applicationsList.add(applications);
-        applications = new Applications(0, "https://pbs.twimg.com/profile_images/655055033659183104/ryWP6nnJ_400x400.png","Smart Home","Smart Inc", 4.7, 10);
+        applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/lomba/lomba2017/ME17LOMG14.jpg","Uniknya Sifat Bahan","BPMPK Inc", 4.7, 10);
         applicationsList.add(applications);
-        applications = new Applications(0, "https://cfcdnpull-creativefreedoml.netdna-ssl.com/wp-content/uploads/2015/06/Twitter-bird-white-blue2.png","Twitter","Twitter Inc", 4.1, 10);
+        applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/me/me2013/ME13ABAHMA02.jpg","Permutasi","BPMPK Inc", 4.1, 10);
         applicationsList.add(applications);
-        applications = new Applications(0, "http://whisper.sh/img/whisper-square-appicon@3x.png","Sum and Math","Edu Inc", 4.0, 10);
+        applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/me/me2013/ME13AIPABI01.jpg","Siklus Krebs","BPMPK Inc", 4.0, 10);
         applicationsList.add(applications);
-        applications = new Applications(0, "https://pbs.twimg.com/profile_images/655055033659183104/ryWP6nnJ_400x400.png","Smart Home","Smart Inc", 4.7, 10);
+        applications = new Applications(0, "https://m-edukasi.kemdikbud.go.id/medukasi/res/icon-produk/me/me2013/ME13AIPAKI02.jpg","Minyak Bumi","BPMPK Inc", 4.7, 10);
         applicationsList.add(applications);
     }
 }

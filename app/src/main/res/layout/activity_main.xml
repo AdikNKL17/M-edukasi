@@ -75,8 +75,6 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <!--</android.support.design.widget.CollapsingToolbarLayout>-->
-
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
@@ -84,8 +82,8 @@
             android:layout_alignParentBottom="true"
             android:background="@color/colorAccent"
             app:elevation="0dp"
-            app:itemIconTint="@drawable/bottom_navigation_colors"
-            app:itemTextColor="@drawable/bottom_navigation_colors"
+            app:itemIconTint="@drawable/jelajah_navigation_colors"
+            app:itemTextColor="@drawable/jelajah_navigation_colors"
             app:labelVisibilityMode="labeled"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

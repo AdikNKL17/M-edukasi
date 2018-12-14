@@ -7,13 +7,17 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-        <item name="android:fontFamily">@font/font_family</item>
+        <item name="android:fontFamily">@font/circular_std_book</item>
     </style>
 
     <style name="AppTheme.Detail" parent="AppTheme">
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
         <item name="android:fontFamily">@font/circular_std_book</item>
+    </style>
+
+    <style name="Toolbar.Detail" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>

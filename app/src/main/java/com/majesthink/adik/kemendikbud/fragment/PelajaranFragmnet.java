@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.majesthink.adik.kemendikbud.R;
+import com.majesthink.adik.kemendikbud.VerticalItemDecoration;
 import com.majesthink.adik.kemendikbud.adapter.PelajaranAdapter;
 import com.majesthink.adik.kemendikbud.model.Pelajaran;
 
@@ -34,6 +35,8 @@ public class PelajaranFragmnet extends android.support.v4.app.Fragment {
         recycler_pelajaran = view.findViewById(R.id.list_pelajaran);
         recycler_pelajaran.setLayoutManager(new LinearLayoutManager(container.getContext(), LinearLayoutManager.VERTICAL, false));
         recycler_pelajaran.setItemAnimator(new DefaultItemAnimator());
+        int margin = getResources().getDimensionPixelSize(R.dimen.slider_margin);
+        recycler_pelajaran.addItemDecoration(new VerticalItemDecoration(margin));
         recycler_pelajaran.setAdapter(pelajaranAdapter);
 
         dataPelajaran();
@@ -43,6 +46,22 @@ public class PelajaranFragmnet extends android.support.v4.app.Fragment {
 
     private void dataPelajaran() {
         Pelajaran pelajaran = new Pelajaran(1, "Pelajaran 1", "https://img.icons8.com/color/1600/math.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 2", "https://img.icons8.com/color/1600/test-tube.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 3", "https://img.icons8.com/color/1600/physics.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 4", "https://img.icons8.com/color/1600/sprout.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 5", "https://img.icons8.com/color/1600/computer.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 6", "https://img.icons8.com/color/1600/running.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 7", "https://img.icons8.com/color/1600/language.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 8", "https://img.icons8.com/color/1600/math.png", 21);
+        pelajaranList.add(pelajaran);
+        pelajaran = new Pelajaran(1, "Pelajaran 9", "https://img.icons8.com/color/1600/math.png", 21);
         pelajaranList.add(pelajaran);
     }
 

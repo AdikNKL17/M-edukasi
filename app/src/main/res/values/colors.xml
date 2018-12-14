@@ -7,5 +7,7 @@
     <color name="colorBlack">#2b2b2b</color>
     <color name="colorBg">#FEFEFE</color>
     <color name="colorGray">#d5d5d5</color>
-    <color name="colorCategory">#EFAB4B</color>
+    <color name="colorCategory">#F6A43D</color>
+    <color name="colorPelajaran">#F63D69</color>
+    <color name="colorJenjang">#7E30E4</color>
 </resources>

@@ -51,7 +51,7 @@ public class CategoriesAdapter extends RecyclerView.Adapter<CategoriesAdapter.Ca
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), CategoryDetail.class);
-                intent.putExtra("CATEGORIES_NAME", categories.getName());
+                intent.putExtra("TOOLBAR_NAME", categories.getName());
                 v.getContext().startActivity(intent);
             }
         });

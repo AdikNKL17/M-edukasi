@@ -33,7 +33,7 @@ public class NewestAdapter extends RecyclerView.Adapter<NewestAdapter.NewestHold
 
     @Override
     public void onBindViewHolder(@NonNull NewestHolder newestHolder, int i) {
-        Newest newest = newestList.get(i);
+        final Newest newest = newestList.get(i);
 
         Picasso.get()
                 .load(newestList.get(i).getApp_icon())
@@ -47,7 +47,13 @@ public class NewestAdapter extends RecyclerView.Adapter<NewestAdapter.NewestHold
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), DetailActivity.class);
+                intent.putExtra("APP_NAME", newest.getApp_name());
+                intent.putExtra("APP_ICON", newest.getApp_icon());
+                intent.putExtra("APP_DEVELOPER", newest.getApp_developer());
+                intent.putExtra("APP_SIZE", Integer.toString(newest.getSize()));
+                intent.putExtra("APP_RATE", Double.toString(newest.getRate()));
                 v.getContext().startActivity(intent);
+
             }
         });
 

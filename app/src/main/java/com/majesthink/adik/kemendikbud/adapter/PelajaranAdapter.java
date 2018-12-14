@@ -1,6 +1,7 @@
 package com.majesthink.adik.kemendikbud.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.majesthink.adik.kemendikbud.R;
+import com.majesthink.adik.kemendikbud.activity.CategoryDetail;
 import com.majesthink.adik.kemendikbud.model.Pelajaran;
 import com.squareup.picasso.Picasso;
 
@@ -33,7 +35,7 @@ public class PelajaranAdapter extends RecyclerView.Adapter<PelajaranAdapter.Pela
     @Override
     public void onBindViewHolder(@NonNull PelajaranHolder pelajaranHolder, int i) {
 
-        Pelajaran pelajaran = pelajaranList.get(i);
+        final Pelajaran pelajaran = pelajaranList.get(i);
 
         Picasso.get()
                 .load(pelajaran.getCATEGORIES_ICON())
@@ -43,6 +45,15 @@ public class PelajaranAdapter extends RecyclerView.Adapter<PelajaranAdapter.Pela
 
         pelajaranHolder.pelajaran_name.setText(pelajaran.getName());
         pelajaranHolder.pelajaran_total.setText(Integer.toString(pelajaran.getTotal()));
+
+        pelajaranHolder.pelajaran_holder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), CategoryDetail.class);
+                intent.putExtra("TOOLBAR_NAME", pelajaran.getName());
+                v.getContext().startActivity(intent);
+            }
+        });
 
     }
 

@@ -1,5 +1,6 @@
 package com.majesthink.adik.kemendikbud.activity;
 
+import android.content.res.ColorStateList;
 import android.support.annotation.NonNull;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.BottomNavigationView;
@@ -102,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.kategori:
                     selectedFragment = new KategoriFragment();
-                    /*navigationView.setBackgroundColor(getResources().getColor(R.color.colorCategory));*/
                     break;
                 case R.id.pelajaran:
                     selectedFragment = new PelajaranFragmnet();
