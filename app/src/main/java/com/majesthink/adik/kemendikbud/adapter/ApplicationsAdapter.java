@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.majesthink.adik.kemendikbud.R;
@@ -32,7 +33,7 @@ public class ApplicationsAdapter extends RecyclerView.Adapter<ApplicationsAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecommendedHolder recommendedHolder, int i) {
+    public void onBindViewHolder(@NonNull final RecommendedHolder recommendedHolder, int i) {
         final Applications applications = applicationsList.get(i);
 
         Picasso.get()
@@ -45,6 +46,16 @@ public class ApplicationsAdapter extends RecyclerView.Adapter<ApplicationsAdapte
         recommendedHolder.appDeveloper.setText(applications.getApp_developer());
         recommendedHolder.appSize.setText(Integer.toString(applications.getSize()));
         recommendedHolder.appRate.setText(Double.toString(applications.getRate()));
+
+        recommendedHolder.options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popupMenu = new PopupMenu(context, recommendedHolder.options);
+                popupMenu.inflate(R.menu.bottom_navigation);
+
+                popupMenu.show();
+            }
+        });
 
         recommendedHolder.recommendedWrapper.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +81,7 @@ public class ApplicationsAdapter extends RecyclerView.Adapter<ApplicationsAdapte
 
         ConstraintLayout recommendedWrapper;
         RoundedImageView appIcon;
-        TextView appName, appDeveloper, appSize, appRate;
+        TextView appName, appDeveloper, appSize, appRate, options;
 
         public RecommendedHolder(@NonNull View itemView) {
             super(itemView);
@@ -80,6 +91,7 @@ public class ApplicationsAdapter extends RecyclerView.Adapter<ApplicationsAdapte
             appSize = itemView.findViewById(R.id.size);
             appRate = itemView.findViewById(R.id.app_rate);
             recommendedWrapper = itemView.findViewById(R.id.recommended_wrapper);
+            options = itemView.findViewById(R.id.options);
         }
     }
 

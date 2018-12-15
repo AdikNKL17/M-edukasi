@@ -29,6 +29,8 @@ import com.majesthink.adik.kemendikbud.model.Applications;
 import com.majesthink.adik.kemendikbud.model.Categories;
 import com.majesthink.adik.kemendikbud.model.Newest;
 import com.majesthink.adik.kemendikbud.model.Slider;
+import com.makeramen.roundedimageview.RoundedImageView;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +51,8 @@ public class MainActivity extends AppCompatActivity {
     AppBarLayout appBarLayout;
     BottomNavigationView navigationView;
 
+    RoundedImageView profile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
                 ViewCompat.setElevation(appBarLayout, 20);
             }
         });
+
+        profile = findViewById(R.id.profile);
+
+        Picasso.get()
+                .load("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpssp0GzjjaPR4kh1JMY2cV9VNN5buxEv_MNzKJYk2KENGNiC1zw")
+                .fit()
+                .centerCrop()
+                .into(profile);
 
         navigationView = findViewById(R.id.bottom_nav);
         navigationView.setSelectedItemId(R.id.jelajah);

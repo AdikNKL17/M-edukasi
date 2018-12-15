@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.CategoryDetail">
+    tools:context=".activity.CategoryDetail"
+    android:clipToPadding="false"
+    android:outlineProvider="bounds"
+    android:background="@color/colorBg">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -19,8 +22,9 @@
         app:navigationIcon="@drawable/ic_back"
         app:title="Kategori"
         app:titleTextColor="@color/colorPrimary"
-        app:elevation="4dp"
-        app:titleTextAppearance="@style/Toolbar.Detail"/>
+        android:elevation="8dp"
+        app:titleTextAppearance="@style/Toolbar.Detail"
+        android:outlineProvider="bounds"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/list"

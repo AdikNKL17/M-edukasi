@@ -118,7 +118,7 @@
         app:layout_constraintStart_toEndOf="@+id/app_size" />
 
     <TextView
-        android:id="@+id/textViewOptions"
+        android:id="@+id/options"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
