@@ -40,10 +40,6 @@ public class KategoriFragment extends android.support.v4.app.Fragment {
         recycler_categories.addItemDecoration(new VerticalItemDecoration(margin));
         recycler_categories.setAdapter(categoriesAdapter);
 
-        /*int margin = getResources().getDimensionPixelSize(R.dimen.slider_margin);
-
-        recycler_categories.addItemDecoration(new VerticalItemDecoration(margin));*/
-
         dataCategories();
 
         return view;

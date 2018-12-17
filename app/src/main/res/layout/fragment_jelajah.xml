@@ -20,21 +20,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--<RelativeLayout
-            android:id="@+id/recent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">-->
-
-        <!--</RelativeLayout>-->
-
-        <!--<RelativeLayout
-            android:id="@+id/newest"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">-->
 
         <TextView
             android:id="@+id/title_newest"
@@ -65,7 +50,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/banner_slider" />
 
-        <!--   </RelativeLayout>-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list_newest"
@@ -78,13 +62,6 @@
             app:layout_constraintTop_toBottomOf="@+id/title_newest">
 
         </android.support.v7.widget.RecyclerView>
-        <!--
-         <RelativeLayout
-            android:id="@+id/applications"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">-->
 
         <TextView
             android:id="@+id/title_recommended"
@@ -100,13 +77,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/list_newest" />
 
-        <!--         </RelativeLayout>-->
-
-        <!--<RelativeLayout
-            android:id="@+id/container_recommended"
-            android:layout_marginTop="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list_recommended"
@@ -138,9 +108,6 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/list_newest" />
-
-
-        <!--</RelativeLayout>-->
 
     </android.support.constraint.ConstraintLayout>
 </android.support.v4.widget.NestedScrollView>

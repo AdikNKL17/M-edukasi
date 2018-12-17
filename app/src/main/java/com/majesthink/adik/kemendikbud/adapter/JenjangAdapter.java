@@ -16,10 +16,7 @@ import com.majesthink.adik.kemendikbud.activity.CategoryDetail;
 import com.majesthink.adik.kemendikbud.model.Jenjang;
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 import java.util.List;
-import java.util.zip.Inflater;
 
 public class JenjangAdapter extends RecyclerView.Adapter<JenjangAdapter.JenjangHolder> {
 

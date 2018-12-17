@@ -14,66 +14,31 @@
         android:layout_marginBottom="8dp"
         app:elevation="4dp">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:background="@color/colorPrimary"
-            app:contentInsetEnd="20dp"
-            app:contentInsetStart="20dp"
-            app:elevation="0dp"
-            app:layout_scrollFlags="scroll|snap|enterAlways"
-            app:titleTextColor="@color/colorAccent">
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|enterAlways">
 
-            <RelativeLayout
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="?actionBarSize"
+                android:background="@color/colorPrimary"
+                app:elevation="0dp"
+                app:titleTextColor="@color/colorAccent"
+                app:title="@string/app_name"
+                app:titleTextAppearance="@style/Toolbar.Detail">
 
-                <ImageView
-                    android:id="@+id/logo"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/logo" />
+            </android.support.v7.widget.Toolbar>
 
-                <TextView
-                    android:id="@+id/app_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
-                    android:layout_toRightOf="@id/logo"
-                    android:text="@string/app_name"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
+            <com.miguelcatalan.materialsearchview.MaterialSearchView
+                android:id="@+id/search_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="20dp"
-                    android:layout_toLeftOf="@id/profile"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?android:selectableItemBackground"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/ic_search"
-                    app:riv_corner_radius="12dp" />
+        </FrameLayout>
 
-                <com.makeramen.roundedimageview.RoundedImageView
-                    android:id="@+id/profile"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:background="@color/colorAccent"
-                    android:scaleType="centerCrop"
-                    app:riv_corner_radius="12dp"
-                    app:riv_mutate_background="true" />
 
-            </RelativeLayout>
-
-        </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/bottom_nav"

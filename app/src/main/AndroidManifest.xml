@@ -13,11 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.MainActivity"></activity>
+        <activity android:name=".activity.MainActivity" android:screenOrientation="portrait"></activity>
         <activity
             android:name=".activity.DetailActivity"
-            android:theme="@style/AppTheme.Detail" />
-        <activity android:name=".activity.SplashActivity">
+            android:theme="@style/AppTheme.Detail"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +28,8 @@
         </activity>
         <activity
             android:name=".activity.CategoryDetail"
-            android:theme="@style/AppTheme.Detail">
+            android:theme="@style/AppTheme.Detail"
+            android:screenOrientation="portrait">
 
         </activity>
     </application>
