@@ -1,5 +1,6 @@
 package com.majesthink.adik.kemendikbud.activity;
 
+import android.content.Context;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+import com.majesthink.adik.kemendikbud.HorizontalItemDecoration;
 import com.majesthink.adik.kemendikbud.R;
 import com.majesthink.adik.kemendikbud.SliderItemDecoration;
 import com.majesthink.adik.kemendikbud.adapter.SliderDetailAdapter;
@@ -20,6 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DetailActivity extends AppCompatActivity {
+
+    Context context = this;
 
     android.support.v7.widget.Toolbar toolbarm;
     RecyclerView recyclerView;
@@ -102,7 +107,13 @@ public class DetailActivity extends AppCompatActivity {
         recyclerView.setAdapter(sliderDetailAdapter);
 
         int space = getResources().getDimensionPixelSize(R.dimen.slider_margin);
-        recyclerView.addItemDecoration(new SliderItemDecoration(space));
+        recyclerView.addItemDecoration(new HorizontalItemDecoration(space));
 
+    }
+
+    @Override
+    public void onBackPressed(){
+        super.onBackPressed();
+        Animatoo.animateSlideRight(context);
     }
 }

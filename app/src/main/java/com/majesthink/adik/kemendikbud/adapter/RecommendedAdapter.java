@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.majesthink.adik.kemendikbud.activity.DetailActivity;
 import com.majesthink.adik.kemendikbud.R;
 import com.majesthink.adik.kemendikbud.model.Applications;
@@ -56,6 +57,7 @@ public class RecommendedAdapter extends RecyclerView.Adapter<RecommendedAdapter.
                 intent.putExtra("APP_SIZE", Integer.toString(applications.getSize()));
                 intent.putExtra("APP_RATE", Double.toString(applications.getRate()));
                 v.getContext().startActivity(intent);
+                Animatoo.animateSlideLeft(v.getContext());
             }
         });
 

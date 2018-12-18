@@ -4,10 +4,10 @@ import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-public class SliderItemDecoration extends RecyclerView.ItemDecoration {
+public class HorizontalItemDecoration extends RecyclerView.ItemDecoration {
     private int margin;
 
-    public SliderItemDecoration(int margin){
+    public HorizontalItemDecoration(int margin){
         this.margin = margin;
     }
 
@@ -17,7 +17,6 @@ public class SliderItemDecoration extends RecyclerView.ItemDecoration {
         rect.right = margin;
         rect.top = margin;
         rect.bottom = margin;
-        rect.left = margin;
 
         if (recyclerView.getChildLayoutPosition(view) == 0){
             rect.left = margin;

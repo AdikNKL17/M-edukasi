@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.majesthink.adik.kemendikbud.R;
 import com.majesthink.adik.kemendikbud.activity.DetailActivity;
 import com.majesthink.adik.kemendikbud.model.Applications;
@@ -67,6 +68,7 @@ public class ApplicationsAdapter extends RecyclerView.Adapter<ApplicationsAdapte
                 intent.putExtra("APP_SIZE", Integer.toString(applications.getSize()));
                 intent.putExtra("APP_RATE", Double.toString(applications.getRate()));
                 v.getContext().startActivity(intent);
+                Animatoo.animateSlideLeft(v.getContext());
             }
         });
 

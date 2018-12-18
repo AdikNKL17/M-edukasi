@@ -6,12 +6,16 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.github.rubensousa.gravitysnaphelper.GravitySnapHelper;
+import com.majesthink.adik.kemendikbud.HorizontalItemDecoration;
 import com.majesthink.adik.kemendikbud.R;
 import com.majesthink.adik.kemendikbud.SliderItemDecoration;
 import com.majesthink.adik.kemendikbud.activity.CategoryDetail;
@@ -21,6 +25,7 @@ import com.majesthink.adik.kemendikbud.adapter.SliderAdapter;
 import com.majesthink.adik.kemendikbud.model.Applications;
 import com.majesthink.adik.kemendikbud.model.Newest;
 import com.majesthink.adik.kemendikbud.model.Slider;
+import com.rbrooks.indefinitepagerindicator.IndefinitePagerIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +41,7 @@ public  class JelajahFragment extends android.support.v4.app.Fragment {
     RecyclerView sliderRecycler, newestRecyler, recommendedRecycler;
 
     TextView newest_title, newest_more, recommended_title, recommended_more;
+
 
     @Nullable
     @Override
@@ -57,14 +63,18 @@ public  class JelajahFragment extends android.support.v4.app.Fragment {
         sliderRecycler.setItemAnimator(new DefaultItemAnimator());
         sliderRecycler.addItemDecoration(new SliderItemDecoration(margin));
         sliderRecycler.setAdapter(sliderAdapter);
+        new LinearSnapHelper().attachToRecyclerView(sliderRecycler);
+
 
         newestRecyler = view.findViewById(R.id.list_newest);
         newestList = new ArrayList<>();
         newestAdapter = new NewestAdapter(container.getContext(), newestList);
         newestRecyler.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.HORIZONTAL, false));
         newestRecyler.setItemAnimator(new DefaultItemAnimator());
-        newestRecyler.addItemDecoration(new SliderItemDecoration(margin));
+        newestRecyler.addItemDecoration(new HorizontalItemDecoration(margin));
         newestRecyler.setAdapter(newestAdapter);
+        new LinearSnapHelper().attachToRecyclerView(newestRecyler);
+
         newest_more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

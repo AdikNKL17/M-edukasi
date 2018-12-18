@@ -3,6 +3,7 @@ package com.majesthink.adik.kemendikbud.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.majesthink.adik.kemendikbud.activity.DetailActivity;
 import com.majesthink.adik.kemendikbud.R;
 import com.majesthink.adik.kemendikbud.model.Newest;
@@ -53,6 +55,7 @@ public class NewestAdapter extends RecyclerView.Adapter<NewestAdapter.NewestHold
                 intent.putExtra("APP_SIZE", Integer.toString(newest.getSize()));
                 intent.putExtra("APP_RATE", Double.toString(newest.getRate()));
                 v.getContext().startActivity(intent);
+                Animatoo.animateSlideLeft(v.getContext());
 
             }
         });
@@ -66,7 +69,7 @@ public class NewestAdapter extends RecyclerView.Adapter<NewestAdapter.NewestHold
 
     public class NewestHolder extends RecyclerView.ViewHolder {
 
-        RelativeLayout newestHolder;
+        CardView newestHolder;
         RoundedImageView appIcon;
         TextView appName;
 
