@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,7 +15,6 @@ import android.widget.TextView;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.majesthink.adik.kemendikbud.HorizontalItemDecoration;
 import com.majesthink.adik.kemendikbud.R;
-import com.majesthink.adik.kemendikbud.SliderItemDecoration;
 import com.majesthink.adik.kemendikbud.adapter.SliderDetailAdapter;
 import com.majesthink.adik.kemendikbud.model.SliderDetail;
 import com.squareup.picasso.Picasso;
@@ -26,7 +26,7 @@ public class DetailActivity extends AppCompatActivity {
 
     Context context = this;
 
-    android.support.v7.widget.Toolbar toolbarm;
+    Toolbar toolbar;
     RecyclerView recyclerView;
     SliderDetailAdapter sliderDetailAdapter;
     List<SliderDetail> sliderDetailList = new ArrayList<>();
@@ -39,18 +39,18 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        toolbarm = findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            toolbarm.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onBackPressed();
-                }
-            });
-        }
-        toolbarm.setNavigationIcon(R.drawable.ic_close);
-        toolbarm.inflateMenu(R.menu.detail_menu);
+
+        toolbar.setNavigationIcon(R.drawable.ic_back);
+        toolbar.inflateMenu(R.menu.detail_menu);
+
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
         app_detail_icon = findViewById(R.id.app_icon);
         app_detail_name = findViewById(R.id.app_name);

@@ -28,17 +28,20 @@
 
     <TextView
         android:id="@+id/app_name"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:fontFamily="@font/circular_std_book"
         android:maxLines="1"
         android:text="Netflix"
         android:textColor="@color/colorBlack"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/app_icon"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -118,15 +121,16 @@
 
     <TextView
         android:id="@+id/options"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:attr/actionBarItemBackground"
+        android:gravity="center_vertical"
         android:text="&#8942;"
         android:textAlignment="center"
         android:textAppearance="?android:textAppearanceLarge"
+        android:textColor="@color/colorGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

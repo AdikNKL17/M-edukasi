@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorBg"
     tools:context=".activity.DetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="0dp"
-        android:translationZ="0.1dp">
+        android:translationZ="0.1dp"
+        app:elevation="0dp">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -20,8 +20,7 @@
             android:layout_height="wrap_content"
             android:background="@color/colorAccent"
             app:elevation="0dp"
-            android:navigationIcon="@drawable/ic_close"
-            tools:ignore="NewApi">
+            app:layout_scrollFlags="scroll|snap|enterAlways">
 
         </android.support.v7.widget.Toolbar>
 
@@ -39,11 +38,11 @@
             android:id="@+id/wrapper"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants"
             android:focusedByDefault="true"
-            android:descendantFocusability="blocksDescendants">
+            android:orientation="vertical">
 
-            <android.support.design.widget.CollapsingToolbarLayout
+            <android.support.constraint.ConstraintLayout
                 android:id="@+id/collapsing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,12 +61,18 @@
                 <android.support.constraint.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginBottom="16dp"
                     android:background="@color/colorPrimary"
-                    android:elevation="4dp">
+                    android:elevation="4dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                         android:id="@+id/app_icon"
@@ -207,14 +212,15 @@
 
                 </android.support.constraint.ConstraintLayout>
 
-            </android.support.design.widget.CollapsingToolbarLayout>
+            </android.support.constraint.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp">
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/title_info"
@@ -230,10 +236,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:textSize="14sp"
                     android:lineSpacingExtra="4dp"
+                    android:maxLines="8"
                     android:text="@string/lorem"
-                    android:maxLines="9"/>
+                    android:textSize="14sp"/>
+
+                <Button
+                    android:id="@+id/read_more"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawableBottom="@drawable/ic_expand_arrow"
+                    android:drawablePadding="10dp"
+                    android:text="Lanjutkan Membaca"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent" />
 
             </LinearLayout>
 
@@ -241,12 +263,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
-                android:padding="20dp"
-                android:background="#eaeaea">
+                android:background="#eaeaea"
+                android:orientation="vertical"
+                android:padding="20dp">
 
                 <TextView
                     android:id="@+id/title_new"
@@ -262,10 +284,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:textSize="14sp"
                     android:lineSpacingExtra="4dp"
+                    android:maxLines="2"
                     android:text="@string/lorem"
-                    android:maxLines="2"/>
+                    android:textSize="14sp"/>
 
             </LinearLayout>
 

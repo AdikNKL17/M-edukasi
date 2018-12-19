@@ -17,7 +17,6 @@ public class SliderItemDecoration extends RecyclerView.ItemDecoration {
         rect.right = margin;
         rect.top = margin;
         rect.bottom = margin;
-        rect.left = margin;
 
         if (recyclerView.getChildLayoutPosition(view) == 0){
             rect.left = margin;

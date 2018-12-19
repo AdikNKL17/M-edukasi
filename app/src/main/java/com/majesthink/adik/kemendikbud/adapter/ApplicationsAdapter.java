@@ -52,7 +52,7 @@ public class ApplicationsAdapter extends RecyclerView.Adapter<ApplicationsAdapte
             @Override
             public void onClick(View v) {
                 PopupMenu popupMenu = new PopupMenu(context, recommendedHolder.options);
-                popupMenu.inflate(R.menu.bottom_navigation);
+                popupMenu.inflate(R.menu.list_menu);
 
                 popupMenu.show();
             }
